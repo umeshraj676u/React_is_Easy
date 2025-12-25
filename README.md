@@ -1,7 +1,5 @@
 ﻿# React_is_Easy
-
-# React_is_Easy
-
+ 
 This project demonstrates how React works using CDN without JSX.
 
 ## Features
@@ -20,3 +18,4 @@ This project demonstrates how React works using CDN without JSX.
 1. Clone the repository
    ```bash
    git clone https://github.com/umeshraj676u/React_is_Easy.git
+
