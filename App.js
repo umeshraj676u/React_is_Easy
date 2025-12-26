@@ -1,24 +1,29 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// Simple heading element
 const heading = React.createElement(
   "h1",
   { id: "header", xyz: "value" },
   "Hello world from React"
 );
 
-// Nested structure
+// Nested structure with siblings
 const parent = React.createElement(
   "div",
   { id: "parent" },
   React.createElement(
     "div",
-    { id: "child" },[
-      //Sibling elements ko ham array me daal ke render kara sakte hai
-      React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag")]
+    { id: "child" },
+    [
+      // Sibling elements ko array me rakh sakte hain
+      React.createElement("h1", { key: "h1" }, "I am h1 tag"),
+      React.createElement("h2", { key: "h2" }, "I am h2 tag")
+    ]
   )
 );
 
 // App = combination of everything
-//means ham ek root se sare components ko render kara sakte hai
 const App = React.createElement(
   "div",
   { id: "app" },
@@ -28,4 +33,4 @@ const App = React.createElement(
 
 // Single root render
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(App);
+root.render(App); // ✅ <App /> NAHI likhna
