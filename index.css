@@ -1,3 +1,52 @@
-#header{
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Search bar */
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: 55%;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* User icon */
+.user {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Page content */
+.content {
+  padding: 40px;
+  text-align: center;
 }
