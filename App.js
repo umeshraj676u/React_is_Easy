@@ -1,36 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Simple heading element
-const heading = React.createElement(
-  "h1",
-  { id: "header", xyz: "value" },
-  "Hello world from React"
+//React Element 
+const heading = (
+  <h1 className="head" tabIndex ="5">
+    Hello World from React using jsx!
+  </h1>
 );
 
-// Nested structure with siblings
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    [
-      // Sibling elements ko array me rakh sakte hain
-      React.createElement("h1", { key: "h1" }, "I am h1 tag"),
-      React.createElement("h2", { key: "h2" }, "I am h2 tag")
-    ]
-  )
+// React functional component
+const HeadingComponent = () => (
+  <div id="container">
+    {heading}
+    <h1 className="heading">Hello World from React using component! </h1>
+  </div>
 );
-
-// App = combination of everything
-const App = React.createElement(
-  "div",
-  { id: "app" },
-  heading,
-  parent
-);
-
-// Single root render
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(App); // ✅ <App /> NAHI likhna
+root.render(<HeadingComponent />); 
