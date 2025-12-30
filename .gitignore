@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+node_modules/
+.parcel-cache/
+dist/
+>>>>>>> dec9ae56c1c53844f00b07dcfc80329d51d1899c
