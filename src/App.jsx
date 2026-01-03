@@ -1,15 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Home from'./pages/Home.jsx';
+import Home from './pages/Home.jsx';
+import Cart from './pages/Cart.jsx';
+import { CartProvider } from './context/CartContext';
+
 function App() {
-  const [count, setCount] = useState(0)
- return (
-  <div>
-    <Home/>
-  </div>
- )
+  const [currentPage, setCurrentPage] = useState('home');
+
+  return (
+    <CartProvider>
+      <div>
+        {currentPage === 'home' ? (
+          <Home setCurrentPage={setCurrentPage} />
+        ) : (
+          <Cart setCurrentPage={setCurrentPage} />
+        )}
+      </div>
+    </CartProvider>
+  )
 }
 
 export default App

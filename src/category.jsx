@@ -1,10 +1,11 @@
 import { FaBorderAll } from "react-icons/fa6";
 export const categories = [
-  {
-    id: 1,
-    name: "All",
-    image: <FaBorderAll />,
-  },
+{
+  id: 1,
+  nameClass: "mt-[200px]",  
+  image: <FaBorderAll className="text-8xl mt-20" />
+},
+
   {
     id: 2,
     name: "Gold",
